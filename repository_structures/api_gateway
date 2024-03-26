@@ -1,0 +1,39 @@
+.
+├── poetry.lock
+├── poetry.toml
+├── README.md
+├── deployment
+│   ├── dev
+│	│	├── docker-compose.yml
+│   │   ├── Dockerfile
+│   │   └── start
+│   │       └── start.sh
+│   └── prod
+│		├── docker-compose.yml
+│       ├── Dockerfile
+│       ├── nginx
+│       │   ├── Dockerfile
+│       │   └── nginx.conf
+│       └── start
+│           └── start.sh
+├── src
+│   ├── __init__.py
+│   ├── conf.py
+│   ├── expections.py
+│   ├── main.py
+│   ├── utils.py
+│   ├── routes
+│	│	├── auth.py
+│	│	├── forum.py
+│   │ 	└── library.py
+│	└──	schemas
+│    	├── forum.py
+│    	└── library.py
+├── run_project
+│	├── run_dev.sh
+│	└──	run_prod.sh
+└──	tests
+ 	├── test_auth.py
+    ├── test_forum.py
+ 	└── test_library.py
+
