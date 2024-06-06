@@ -1,39 +1,51 @@
 .
-├── poetry.lock
-├── poetry.toml
-├── README.md
 ├── deployment
 │   ├── dev
-│	│	├── docker-compose.yml
-│   │   ├── Dockerfile
-│   │   └── start
-│   │       └── start.sh
+│   │   ├── scripts
+│   │   │   └── run.sh
+│   │   ├── src
+│   │   ├── docker-compose.yml
+│   │   └── Dockerfile
 │   └── prod
-│		├── docker-compose.yml
-│       ├── Dockerfile
 │       ├── nginx
 │       │   ├── Dockerfile
 │       │   └── nginx.conf
-│       └── start
-│           └── start.sh
+│       ├── scripts
+│       │   └── run.sh
+│       ├── src
+│       ├── docker-compose.yml
+│       └── Dockerfile
 ├── src
-│   ├── __init__.py
-│   ├── conf.py
-│   ├── expections.py
-│   ├── main.py
-│   ├── utils.py
-│   ├── routes
-│	│	├── auth.py
-│	│	├── forum.py
-│   │ 	└── library.py
-│	└──	schemas
-│    	├── forum.py
-│    	└── library.py
-├── run_project
-│	├── run_dev.sh
-│	└──	run_prod.sh
-└──	tests
- 	├── test_auth.py
-    ├── test_forum.py
- 	└── test_library.py
+│   ├── datastructures
+│   │   ├── forum.py
+│   │   └── library.py
+│   ├── dependencies
+│   │   └── auth.py
+│   ├── routers
+│   │   ├── forum.py
+│   │   └── library.py
+│   ├── utils
+│   │   ├── graphql
+│   │   │   └── request_body_builders.py
+│   │   ├── gateway_routers.py
+│   │   └── general.py
+│   ├── conf.py
+│   ├── exceptions.py
+│   ├── main.py
+│   └── router_params.py
+├── tests
+│   ├── test_gateway_router
+│   │   ├── test_forum_router.py
+│   │   └── test_library_router.py
+│   ├── test_graphql_request_builder
+│   │   ├── test_author_requests.py
+│   │   └── test_book_requests.py
+│   ├── test_views
+│   │   ├── test_forum_views.py
+│   │   └── test_library_views.py
+│   └── conftest.py
+├── poetry.lock
+├── pyproject.toml
+└── README.md
 
+18 directories, 30 files
