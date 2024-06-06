@@ -1,0 +1,44 @@
+Table author {
+  id int [primary key]
+  first_name varchar
+  middle_name varchar
+  last_name varchar
+  created_by string
+  created_on datetime
+  last_updated_by string
+  last_updated_on datetime
+}
+
+Table book {
+  id int PK
+  title varchar
+  authors int
+  publication_year int
+  language varchar
+  category varchar
+  created_by string
+  created_on datetime
+  last_updated_by string
+  last_updated_on datetime
+}
+
+Ref book_author: book.id <> author.id
+
+Table topic {
+  id int [primary key]
+  title varchar
+  description varchar
+  category varchar
+  created_by string
+  created_on datetime
+}
+
+Table post {
+  id int [primary key]
+  content varchar
+  author varchar
+  posted_on datetime
+  topic int [ref: < topic.id]
+}
+
+// Schemes created from https://dbdiagram.io/ //
