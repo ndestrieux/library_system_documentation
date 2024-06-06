@@ -1,0 +1,3 @@
+In the repository you want to get the whole structure, run the following command in terminal:
+
+`tree -I '*__*' --dirsfirst > <path/to/the/doc/file>`
